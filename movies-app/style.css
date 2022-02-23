@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #242e4c;
+}
+
+main {
+  position: relative;
+}
+
+.header {
+  width: 800px;
+  margin: 2rem auto;
+}
+
+.header input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 1.6rem;
+  border-radius: 25px;
+  background: #242e4c;
+  border: 1px solid #708ed2;
+  color: #708ed2;
+  font-size: 1rem;
+  outline: none;
+}
+
+.header input::placeholder {
+  color: #708ed2;
+  font-size: 1rem;
+}
+
+.movie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 450px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 5px;
+}
+
+.movie img {
+  width: 300px;
+  height: 400px;
+  max-width: 100%;
+  min-width: 100%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 3px;
+  object-fit: cover;
+}
+
+.movie > div {
+  background-color: #292847;
+  margin: 1.5rem 0;
+  color: #fff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.movie > div .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+.movie > div .info > span {
+  background: #212139;
+  padding: 1rem;
+  margin-right: -1rem;
+  font-weight: bold;
+}
+
+.movie .movie-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie .overview {
+  background: #ece9e6;
+  background: -webkit-linear-gradient(to right, #ece9e6, #ffffff);
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #272532;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem 2rem 3.2rem 2rem;
+  max-height: 100%;
+  overflow: auto;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.movie .overview h3 {
+  margin-top: 0;
+}
+
+.movie .movie-container:hover .overview {
+  transform: translateY(0);
+}
